@@ -1,0 +1,624 @@
+/* Configuraciones iniciales */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Container para el header del navbar */
+.header-container
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(95, 91, 91);
+    padding: 10px;
+    /* Header fijo para poder usar la navegación de enlaces */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Propiedades css para la parte de logo */
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__img
+{
+    width: 100px;
+}
+
+.logo__h1
+{
+    font-size: 15px;
+    color: white;
+}
+
+/* Propiedades css para la parte de la barra de navegación */
+.navbar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__ul
+{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navbar__ul li a
+{
+    color: rgb(202, 202, 214);
+    font-size: 15px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.navbar__ul li a:hover
+{
+    color: yellow!important;
+}
+
+/* Propiedades css para la parte activa dentro del navbar  */
+.active
+{
+    color: white !important;
+}
+
+.active-verde
+{
+    color: greenyellow !important;
+}
+
+/* Media query para el header entre 481px y 992px. Lista en fila */
+@media screen and (min-width: 481px) and (max-width: 992px)
+{
+    /* Container para el header del navbar */
+    .header-container
+    {
+        flex-direction: column;
+    }
+}
+
+/* Media query para el header a 480px. Lista en columna */
+@media screen and (max-width: 480px)
+{
+    /* Container para el header del navbar */
+    .header-container
+    {
+        width: 463px;
+        flex-direction: column;
+    }
+    .navbar__ul
+    {
+        flex-direction: column;
+    }
+    .navbar__ul li
+    {
+        padding: 4px 0;
+    }    
+}
+
+/* Propiedad css para el background principal */
+.bg-vistas
+{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(../imagenes_integrador_front/ba1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 77px;
+}
+
+/* Bloque para generar el difuminado al background principal */
+.bg-dark
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Propiedades css para la card dentro del background-image */
+.card
+{
+    width: 500px;
+    top: 150px;
+    right: 60px;
+    position: absolute;
+    text-align: right;
+}
+
+.card__h2, .card__p, .card__a1, .card__a2
+{
+    color: white;
+}
+
+.card__h2
+{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card__p
+{
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.card__a1, .card__a2
+{
+    text-decoration: none;
+}
+
+.card__a1
+{
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.card__a1:hover
+{
+    color: black;
+    background-color: white;
+}
+
+.card__a2
+{
+    padding: 10px 20px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.card__a2:hover
+{
+    color: green;
+    background-color: white;
+}
+
+.card__a2__orador
+{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.vista__orador
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query para el bg-vistas entre 481px y 992px */
+@media screen and (min-width: 481px) and (max-width: 992px)
+{
+    .bg-vistas
+    {
+        height: 70vh;
+    }
+}
+
+/* Media query para el bg-vistas a 480px */
+@media screen and (max-width: 480px)
+{
+    /* Propiedad css para el background principal */
+    .bg-vistas
+    {
+        /* width: 375px; */
+        margin-top: 207px;
+        height: 45vh;
+    }
+    /* Propiedades css para la card dentro del background-image */
+    .card
+    {
+        width: 90%;
+        top: 30px;
+        right: 30px;
+    }
+    .card__h2
+    {
+        font-size: 20px;
+    }
+    .card__p
+    {
+        font-size: 12px;
+    }
+    .card__a1, .card__a2
+    {
+        font-size: 12px;
+    }
+}
+
+/* Propiedades css para las cards de los oradores */
+.oradores
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.oradores__h2, .oradores__h3
+{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.oradores__h2
+{
+    font-size: 10px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.oradores__h3
+{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/* Display grid para generar una fila de 3 columnas */
+.card__oradores
+{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.card__orador
+{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.card__orador img
+{
+    width: 100%;
+}
+
+.card__orador__1, .card__orador__2, .card__orador__3
+{
+    padding: 14px;
+}
+
+.card__orador__1 h3, .card__orador__2 h3, .card__orador__3 h3
+{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.card__orador__1 p, .card__orador__2 p, .card__orador__3 p
+{
+    color: gray;
+    font-size: 11px;
+    line-height: 17px;
+}
+
+/* Estilo para los diferentes lenguajes de programación */
+.card__orador__1 .javascript, .card__orador__2 .javascript
+{
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 200, 0);
+}
+
+.card__orador__1 .react, .card__orador__2 .react
+{
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(95, 95, 219);
+}
+
+.card__orador__3 .negocios
+{
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    background-color: gray;
+}
+
+.card__orador__3 .startups
+{
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+}
+
+/* Media query para oradores a 480px */
+@media screen and (max-width: 480px)
+{
+    /* Display flex para generar una fila de oradores */
+    .card__oradores
+    {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+}
+
+/* Propiedades para el bloque de paisaje con su descripción */
+.paisaje
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+}
+
+.fondo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.descripcion
+{
+    background-color: rgb(55, 54, 54);
+    padding: 27px;
+}
+
+.descripcion__h3, .descripcion__p, .descripcion__a
+{
+    color: white;
+}
+
+.descripcion__h3
+{
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.descripcion__p
+{
+    color: rgb(220, 213, 213);
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.descripcion__a
+{
+    color: rgb(220, 213, 213);
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid #dcd5d5;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.descripcion__a:hover
+{
+    color: rgb(55, 54, 54);
+    background-color: rgb(220, 213, 213);
+}
+
+/* Media query para paisaje a 480px */
+@media screen and (max-width: 480px)
+{
+    /* Propiedades para el bloque de paisaje con su descripción en una sola columna */
+    .paisaje
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Propiedades css para el bloque del formulario para los oradores */
+.formulario
+{
+    width: 650px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.formulario__h2, .formulario__h3
+{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formulario__h2
+{
+    font-size: 9px;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+.formulario__h3
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.formulario__p
+{
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formulario__p span
+{
+    text-decoration: underline;
+}
+
+.form__flex
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__flex textarea
+{
+    font-size: 18px;
+    padding: 10px;
+    height: 110px;
+}
+
+.form__flex p
+{
+    font-size: 12px;
+    color: gray;
+    margin: 10px 0 20px 0;
+}
+
+/* Display grid para generar una fila de 2 columnas para los input */
+.form__input
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.form__input input
+{
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Estilo para el boton de formulario */
+.form__btn
+{
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(106, 171, 8);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form__btn:hover
+{
+    background-color: rgb(55, 54, 54);
+}
+
+/* Media query para el formulario a 992px */
+@media screen and (max-width: 992px)
+{
+    /* Propiedades css para el bloque del formulario para los oradores */
+    .formulario
+    {
+        width: 463px;
+    }
+    .formulario__p
+    {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .form__flex textarea
+    {
+        width: 350px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    .form__flex p
+    {
+        text-align: center;
+    }
+    /* Display flex para generar una columna para los input */
+    .form__input
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Centrado de los input con margin */
+    .form__input input
+    {
+        width: 350px;
+        margin: 0 auto;
+    }
+    .form__btn
+    {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Propiedades css para el footer de la página, hecha con una lista ul */
+.footer
+{
+    /* Gradiente al background del footer */
+    background: linear-gradient(to right, rgba(40,65,89,1) 0%, rgba(34,105,181,1) 100%);
+}
+.footer__ul
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.footer__ul li
+{
+    width: 120px;
+    list-style: none;
+    text-align: center;
+    padding: 25px;
+}
+
+.footer__ul li a
+{
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer__ul li a:hover
+{
+    color: yellow;
+}
+
+
+/* Media query para el footer a 992px */
+@media screen and (max-width: 992px)
+{
+    /* Propiedades css para el footer de la página, hecha con una lista ul */
+    .footer__ul
+    {
+        /* Grilla de 3 columnas para el footer hasta llegar a 992px  */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+    .footer__ul li
+    {
+        padding: 10px;
+    }   
+}

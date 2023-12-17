@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Oradores Final</title>
+</head>
+<body>
+    <header class="header-container">
+        <!-- Logo con imagen para el header -->
+        <div class="logo">
+            <img class="logo__img" src="imagenes_integrador_front/codoacodo.png" alt="Logo">
+            <h1 class="logo__h1">Conf Bs As</h1>
+        </div>
+        <!-- Lista de enlaces para el navbar -->
+        <nav class="navbar">
+            <ul class="navbar__ul">
+                <li><a href="#conferencia" class="active">La conferencia</a></li>
+                <li><a href="#oradores">Los oradores</a></li>
+                <li><a href="#lugar-fecha">El lugar y la fecha</a></li>
+                <li><a href="#formulario">Conviértete en orador</a></li>
+                <li><a href="vistas/tickets.html" class="active-verde">Comprar tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Bloque principal del main con background-image -->
+        <div class="bg-vistas" id="conferencia">
+            <!-- Bloque para generar el degradado del background -->
+            <div class="bg-dark"></div>
+            <div class="card">
+                <h2 class="card__h2">Conf Bs As</h2>
+                <p class="card__p">Bs As llega por primera veza Argentina. Un evento para compartir con nuestra comunidad el conocimieno y experiencia de los expertos que están creandoel futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para tí. Te esperamos!</p>
+                <!-- Enlaces con formato de botones -->
+                <a href="#" class="card__a1">Quiero ser orador</a>
+                <a href="#" class="card__a2">Comprar tickets</a>
+            </div>
+        </div>
+        <!-- Bloque que contiene las cards de todos los oradores -->
+        <div class="oradores" id="oradores">
+            <h2 class="oradores__h2">Conoce a los</h2>
+            <h3 class="oradores__h3">Oradores</h3>
+            <div class="card__oradores">
+                <!-- Card de Orador -->
+                <div class="card__orador">
+                    <img src="imagenes_integrador_front/steve.jpg" alt="Orador">
+                    <div class="card__orador__1">
+                        <span class="javascript">Javascript</span>
+                        <span class="react">React</span>
+                        <h3>Steve Jobs</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis amet ad aperiam, inventore modi atque distinctio laborum quisquam sunt optio voluptatem reiciendis corrupti explicabo quos dolorem magni, illo suscipit ipsa!</p>
+                    </div>
+                </div>
+                <!-- Card de Orador -->
+                <div class="card__orador">
+                    <img src="imagenes_integrador_front/bill.jpg" alt="Orador">
+                    <div class="card__orador__2">
+                        <span class="javascript">Javascript</span>
+                        <span class="react">React</span>
+                        <h3>Bill Gates</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis amet ad aperiam, inventore modi atque distinctio laborum quisquam sunt optio voluptatem reiciendis corrupti explicabo quos dolorem magni, illo suscipit ipsa!</p>
+                    </div>
+                </div>
+                <!-- Card de Orador -->
+                <div class="card__orador">
+                    <img src="imagenes_integrador_front/ada.jpeg" alt="Orador">
+                    <div class="card__orador__3">
+                        <span class="negocios">Negocios</span>
+                        <span class="startups">Startups</span>
+                        <h3>Ada Lovelace</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis amet ad aperiam, inventore modi atque distinctio laborum quisquam sunt optio voluptatem reiciendis corrupti explicabo quos dolorem magni, illo suscipit ipsa!</p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- Bloque para acceder a la Lista de Oradores -->
+        <div class="vista__orador">
+            <a href="vistas/verOradores.jsp" class="card__a2__orador">
+                Ver otros Oradores
+            </a>
+            <br>
+            <br>
+        </div>
+        <!-- Bloque con paisaje y descripción -->
+        <div class="paisaje" id="lugar-fecha">
+            <div class="fondo">
+                <img src="imagenes_integrador_front/honolulu.jpg" alt="Paisaje">
+            </div>
+            <div class="descripcion">
+                <h3 class="descripcion__h3">Bs As - Octubre</h3>
+                <p class="descripcion__p">Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad- condado consolidada que cubre toda la ciudad (apróximadamente 600km<span>2</span> de superficie).</p>
+                <a class="descripcion__a" href="#">Conoce más</a>
+            </div>
+        </div>
+        <!-- Bloque que contiene el formulario de oradores -->
+        <div class="formulario" id="formulario">
+            <h2 class="formulario__h2">Conviértete en un</h2>
+            <h3 class="formulario__h3">Orador</h3>
+            <p class="formulario__p">Anótate como orador para dar una <span>charla ignite</span>. Cuentanos de qué quieres hablar!</p>
+            <form class="form__flex" action="registroOrador" method="POST">
+                <div class="form__input">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">    
+                </div>
+                <textarea name="tema" id="tema" cols="30" rows="10" placeholder="Sobre qué quieres hablar?"></textarea>
+                <p>Recuerda incluir un título para tu charla</p>
+                <input class="form__btn" type="submit" value="Enviar">
+            </form>
+        </div>
+        <!-- Bloque que contiene el footer de la página -->
+        <footer class="footer">
+            <ul class="footer__ul">
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Prensa</a></li>
+                <li><a href="#">Conferencias</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Estudiantes</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+</html>

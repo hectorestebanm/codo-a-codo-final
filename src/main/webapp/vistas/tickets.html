@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles-tickets.css">
+    <title>Oradores Final Tickets</title>
+</head>
+<body>
+    <header class="header-container">
+        <!-- Logo con enlace para el header -->
+        <div class="logo">
+            <h1 class="logo__h1"><a href="../index.html">Conf Bs As</a></h1>
+        </div>
+        <!-- Lista de enlaces para el navbar -->
+        <nav class="navbar">
+            <ul class="navbar__ul">
+                <li><a href="#conferencia">La conferencia</a></li>
+                <li><a href="#oradores">Los oradores</a></li>
+                <li><a href="#lugar-fecha">El lugar y la fecha</a></li>
+                <li><a href="#formulario" class="active">Conviértete en orador</a></li>
+                <li><a href="#tickets.html" class="active-verde">Comprar tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Bloque principal del programa -->
+    <main class="main">
+        <!-- Bloque donde se encuentra el descuento para cada categpría -->
+        <div class="descuento">
+            <!-- Bloque descuento Estudiante -->
+            <div class="descuento__estudiante">
+                <h3>Estudiante</h3>
+                <p>Tienen un descuento</p>
+                <p><span>80%</span></p>
+                <p>* presentar documentación</p>
+            </div>
+            <!-- Bloque descuento Trainee -->
+            <div class="descuento__trainee">
+                <h3>Trainee</h3>
+                <p>Tienen un descuento</p>
+                <p><span>50%</span></p>
+                <p>* presentar documentación</p>
+            </div>
+            <!-- Bloque descuento Junior -->
+            <div class="descuento__junior">
+                <h3>Junior</h3>
+                <p>Tienen un descuento</p>
+                <p><span>15%</span></p>
+                <p>* presentar documentación</p>
+            </div>    
+        </div>
+        <!-- Bloque con la información en la página del valor del ticket -->
+        <div class="valorTicket">
+            <p>Venta</p>
+            <h2>Valor de ticket $200</h2>
+        </div>
+        <!-- Formulario para ingresar datos y la cantidad de boletos a comprar -->
+        <form class="form">
+            <input class="form__nombre" type="text" placeholder="Nombre">
+            <input class="form__apellido" type="text" placeholder="Apellido">
+            <!-- Mensajes de error en caso que el campo quede vació -->
+            <p class="form__nombre__error">* No puede quedar campo Nombre vacío</p>
+            <p class="form__apellido__error">* No puede quedar campo Apellido vacío</p>
+            <input class="form__email" type="email" placeholder="Correo">
+            <!-- Mensajes de error en caso que el correo no sea válido -->
+            <p class="form__email__error"> * Ingrese un correo válido</p>
+            <!-- Bloque que contiene la cantidad de boletos a elegir -->
+            <div class="form__cantidad">
+                <label for="cantidad">Cantidad</label>
+                <input class="form__cantidad__input" id="cantidad" type="number" placeholder="Cantidad">
+            </div>
+            <!-- Bloque que contiene la categoría a seleccionar para el descuento -->
+            <div class="form__categoria">
+                <label for="categoria">Categoría</label>
+                <select class="form__categoria__select" name="categoria" id="categoria">
+                    <option value="">Sin Categoría</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Trainee">Trainee</option>
+                    <option value="Junior">Junior</option>
+                </select>
+            </div>
+            <!-- Donde aparecerá el precio total a pagar -->
+            <p class="total__pagar">Total a Pagar: $</p>
+            <!-- Botones de Borrar y Resumen con sus respectivos eventos -->
+            <input class="form__btn__borrar btn__verde" type="button" value="Borrar">
+            <input class="form__btn__resumen btn__verde" type="submit" value="Resumen">
+        </form>
+        <!-- Bloque que contiene el footer de la página -->
+        <footer class="footer">
+            <ul class="footer__ul">
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Prensa</a></li>
+                <li><a href="#">Conferencias</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Estudiantes</a></li>
+            </ul>
+        </footer>
+    </main>
+    <script src="../JS/scripts.js"></script>
+</body>
+</html>
